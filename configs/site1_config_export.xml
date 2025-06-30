@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<pfsense>
+  <openvpn>
+    <openvpn-server>
+      <vpnid>1</vpnid>
+      <mode>p2p_tls</mode>
+      <protocol>UDP</protocol>
+      <dev_mode>tun</dev_mode>
+      <interface>wan</interface>
+      <local_port>1194</local_port>
+      <description>VPN Site1 to Site2</description>
+      <tls>server</tls>
+      <crypto>AES-256-CBC</crypto>
+      <digest>SHA256</digest>
+      <engine>none</engine>
+      <certref>site1-cert</certref>
+      <caref>site1-ca</caref>
+      <dh_length>2048</dh_length>
+      <tunnel_network>10.10.10.0/30</tunnel_network>
+      <remote_network>192.168.20.0/24</remote_network>
+      <gwredir>0</gwredir>
+      <block-outside-dns>1</block-outside-dns>
+      <push_route/>
+      <verbosity_level>3</verbosity_level>
+    </openvpn-server>
+  </openvpn>
+</pfsense>
