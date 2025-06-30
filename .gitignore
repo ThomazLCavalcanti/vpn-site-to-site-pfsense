@@ -1,0 +1,23 @@
+# Ignorar arquivos temporários e backups
+*.log
+*.tmp
+*.bak
+*~
+
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de máquina virtual (caso use)
+*.vdi
+*.vmdk
+*.ova
+
+# Ignorar arquivos de ambiente ou senhas
+*.env
+*.pem
+*.key
+
+# Ignorar pastas de cache
+__pycache__/
+.cache/
