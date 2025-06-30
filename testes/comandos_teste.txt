@@ -1,0 +1,19 @@
+# Comandos utilizados para validação da VPN Site-to-Site
+
+# Teste de conectividade de Site 1 para Site 2:
+ping 192.168.20.1 -c 4
+
+# Teste de conectividade de Site 2 para Site 1:
+ping 192.168.10.1 -c 4
+
+# Teste de rota (em ambos os sites):
+traceroute 192.168.20.1
+traceroute 192.168.10.1
+
+# Verificar status da VPN (via pfSense):
+Status > IPsec > Overview
+ou
+Status > OpenVPN > Status (dependendo do tipo de VPN usada)
+
+# Verificar logs de conexão:
+Status > System Logs > IPsec (ou OpenVPN)
